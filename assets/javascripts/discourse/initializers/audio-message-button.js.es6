@@ -1,5 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import AudioMessageModal from "../components/modal/audio-message";
+import AudioMessage from "../components/modal/audio-message";
 import { getOwner } from "@ember/application";
 
 function initializeWithApi(api) {
