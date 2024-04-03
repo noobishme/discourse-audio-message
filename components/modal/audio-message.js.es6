@@ -6,7 +6,7 @@ import getUrl from "discourse-common/lib/get-url";
 import { getOwner } from "discourse-common/lib/get-owner";
 import loadScript from "discourse/lib/load-script";
 
-export default Controller.extend(ModalFunctionality, {
+export default class AudioMessageModal extends Component {
   isRecording: false,
   hasRecording: false,
   audioData: null,
