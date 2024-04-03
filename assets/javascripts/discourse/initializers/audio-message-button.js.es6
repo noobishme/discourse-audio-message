@@ -10,7 +10,11 @@ function initializeWithApi(api) {
       pluginId: 'audio-message',
       actions: {
         openAudioMessageModal() {
-          showModal("audio-message");
+                  getOwner(this)
+          .lookup("service:modal")
+          .show(AudioMessage, {
+            model: { toolbarEvent: this.toolbarEvent },
+          });
         }
       }
     });
