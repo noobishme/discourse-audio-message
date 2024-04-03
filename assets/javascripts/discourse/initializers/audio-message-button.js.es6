@@ -12,7 +12,7 @@ function initializeWithApi(api) {
         showAudioMessageModal() {
                   getOwner(this)
           .lookup("service:modal")
-          .show(AudioMessage, {
+          .show(AudioMessageModal, {
             model: { toolbarEvent: this.toolbarEvent },
           });
         }
