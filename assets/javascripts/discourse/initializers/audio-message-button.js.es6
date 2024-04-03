@@ -25,7 +25,7 @@ function initializeWithApi(api) {
         group: 'extras',
         icon: 'microphone',
         shortcut: 'R',
-        sendAction: () => tb.context.send('openAudioMessageModal')
+        sendAction: () => tb.context.send('showAudioMessageModal')
       })
     });
   }
