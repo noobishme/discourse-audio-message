@@ -34,7 +34,7 @@ function initializeWithApi(api) {
 export default {
   name: "audio-message-button",
 
-  initialize(owner) {
-    withPluginApi("0.1", api => initializeWithApi(api));
+  initialize() {
+    withPluginApi("0.8.7", initializeAudioMessage);
   }
 };
