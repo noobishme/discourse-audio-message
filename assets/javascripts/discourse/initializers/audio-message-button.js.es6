@@ -4,25 +4,28 @@ import { getOwner } from "@ember/application";
 
 function initializeAudioMessage(api) {
   api.modifyClass("controller:composer", {
+
     pluginId: "discourse-audio-message",
+    },
+
     actions: {
       showAudioMessage() {
-                getOwner(this)
-        .lookup("service:modal")
-        .show(AudioMessage, {
-          model: { toolbarEvent: this.toolbarEvent },
-         });
+        getOwner(this)
+          .lookup("service:modal")
+          .show(AudioMessage, {
+            model: { toolbarEvent: this.toolbarEvent },
+          });
        }
      }
-   }),
+  }),
 
-    api.addToolbarPopupMenuOptionsCallback(() => {
-      return {
-        action: "showAudioMessage",
-        id: "audio-message",
-        group: "extras",
-        icon: "microphone",
-        shortcut: "R",
+  api.addToolbarPopupMenuOptionsCallback(() => {
+    return {
+      action: "showAudioMessage",
+      id: "audio-message",
+      group: "extras",
+      icon: "microphone",
+      shortcut: "R",
       };
     });
   }
