@@ -1,5 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import showModal from "discourse/lib/show-modal";
+import AudioMessage from "../components/modal/audio-message";
+import { getOwner } from "@ember/application";
 
 function initializeWithApi(api) {
   const siteSettings = api.container.lookup("site-settings:main");
