@@ -1,4 +1,4 @@
-import Controller from '@ember/component';
+import Component from '@ember/component';
 import ModalFunctionality from 'discourse/mixins/modal-functionality';
 import { action } from '@ember/object';
 import Uppy from '@uppy/core';
