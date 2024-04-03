@@ -19,14 +19,14 @@ function initializeAudioMessage(api) {
       }
     });
 
-    api.onToolbarCreate(tb => {
-      tb.addButton({
-        id: 'audio-message',
-        group: 'extras',
-        icon: 'microphone',
-        shortcut: 'R',
-        sendAction: () => tb.context.send('showAudioMessage')
-      })
+    api.addToolbarPopupMenuOptionsCallback(() => {
+      return {
+        action: "showAudioMessage",
+        id: "audio-message",
+        group: "extras",
+        icon: "microphone",
+        shortcut: "R",
+      };
     });
   }
 }
