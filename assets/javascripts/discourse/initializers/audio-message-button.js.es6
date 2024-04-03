@@ -7,12 +7,12 @@ function initializeWithApi(api) {
 
   if (siteSettings.audio_message_enabled) {
     api.modifyClass("component:d-editor", {
-      pluginId: 'audio-message',
+      pluginId: 'discourse-audio-message',
       actions: {
-        showAudioMessageModal() {
+        showAudioMessage() {
                   getOwner(this)
           .lookup("service:modal")
-          .show(AudioMessageModal, {
+          .show(AudioMessage, {
             model: { toolbarEvent: this.toolbarEvent },
           });
         }
@@ -25,7 +25,7 @@ function initializeWithApi(api) {
         group: 'extras',
         icon: 'microphone',
         shortcut: 'R',
-        sendAction: () => tb.context.send('showAudioMessageModal')
+        sendAction: () => tb.context.send('showAudioMessage')
       })
     });
   }
