@@ -9,7 +9,7 @@ function initializeWithApi(api) {
     api.modifyClass("component:d-editor", {
       pluginId: 'audio-message',
       actions: {
-        openAudioMessageModal() {
+        showAudioMessageModal() {
                   getOwner(this)
           .lookup("service:modal")
           .show(AudioMessage, {
